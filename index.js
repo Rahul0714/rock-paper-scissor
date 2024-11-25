@@ -34,7 +34,8 @@ closeBtn.addEventListener("click", () => {
 });
 
 playAgain.addEventListener("click", () => {
-  window.location.reload();
+  afterPlay.style.display = "none";
+  centerCard.style.display = "block";
 });
 
 resetScore.addEventListener("click", () => {
@@ -44,23 +45,27 @@ resetScore.addEventListener("click", () => {
   comp_score = 0;
   youScore.textContent = you_score;
   compScore.textContent = comp_score;
-  window.location.reload();
+  afterPlay.style.display = "none";
+  centerCard.style.display = "block";
 });
 
 window.addEventListener("load", () => {
   afterPlay.style.display = "none";
-  if (localStorage.getItem("userScore") === null) {
-    localStorage.setItem("userScore", 0);
+
+  if (localStorage.getItem("userScore") == false) {
+    you_score = 0;
   } else {
     you_score = Number(localStorage.getItem("userScore"));
   }
-  if (localStorage.getItem("compScore") === null) {
-    comp_score = localStorage.setItem("compScore", 0);
+  if (localStorage.getItem("compScore") == false) {
+    comp_score = 0;
   } else {
     comp_score = Number(localStorage.getItem("compScore"));
   }
   youScore.textContent = you_score;
   compScore.textContent = comp_score;
+  console.log(you_score, comp_score);
+
   isWin = false;
   nextBtn.style.display = "none";
 });
