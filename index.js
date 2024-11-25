@@ -42,8 +42,8 @@ resetScore.addEventListener("click", () => {
   localStorage.setItem("compScore", 0);
   you_score = 0;
   comp_score = 0;
-  youScore.innerText = you_score;
-  compScore.innerText = comp_score;
+  youScore.textContent = you_score;
+  compScore.textContent = comp_score;
   window.location.reload();
 });
 
@@ -59,8 +59,8 @@ window.addEventListener("load", () => {
   } else {
     comp_score = Number(localStorage.getItem("compScore"));
   }
-  youScore.innerText = you_score;
-  compScore.innerText = comp_score;
+  youScore.textContent = you_score;
+  compScore.textContent = comp_score;
   isWin = false;
   nextBtn.style.display = "none";
 });
@@ -83,8 +83,8 @@ const updateUI = (user, comp) => {
 };
 
 const updateScore = () => {
-  youScore.innerText = you_score;
-  compScore.innerText = comp_score;
+  youScore.textContent = you_score;
+  compScore.textContent = comp_score;
   localStorage.setItem("userScore", you_score);
   localStorage.setItem("compScore", comp_score);
   if (isWin) {
