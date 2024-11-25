@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #8cc461;
+  color: white;
+}
+
+.scorecard {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  padding: 15px;
+  /* background-color: #8cc461; */
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 24px;
+  line-height: auto;
+  font-weight: bold;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.score {
+  color: black;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.scoreNum {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.rules {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#ruleInfo {
+  display: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 27px;
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  background-color: #004429;
+}
+
+.rulesTitle {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.rulesCard {
+  width: 300px;
+}
+
+#xCircle {
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  bottom: 400px;
+  border-radius: 100%;
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  background-color: red;
+  margin: 2px;
+}
+
+.innerX {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#afterPlay {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+  padding: 15px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.centerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+  padding: 15px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.circle {
+  cursor: pointer;
+  width: 125px;
+  height: 125px;
+  border-radius: 100%;
+  background-color: white;
+  overflow: hidden;
+  transition: all 0.3 ease;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+}
+
+.upperCircle {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottomCircle {
+  margin: auto;
+}
+
+.playImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.midMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.midMenuTitle {
+  font-size: 24px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #8cc461;
+}

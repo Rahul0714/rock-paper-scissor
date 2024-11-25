@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock-Paper-Scissor</title>
+  </head>
+  <body>
+    <div class="scorecard">
+      <div class="title">
+        <div>ROCK</div>
+        <div>PAPER</div>
+        <div>SCISSOR</div>
+      </div>
+      <div class="scores">
+        <div class="score">
+          <div>COMPUTER</div>
+          <div>SCORE</div>
+          <div class="scoreNum" id="compScore">0</div>
+        </div>
+        <div class="score">
+          <div>YOUR</div>
+          <div>SCORE</div>
+          <div class="scoreNum" id="youScore">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="afterPlay">
+      <div class="upperCircle">
+        <div class="circle">
+          <img
+            src="images/rock.png"
+            alt="Rock"
+            id="youPlayed"
+            class="playImg"
+          />
+        </div>
+        <div class="midMenu">
+          <div class="midMenuTitle" id="draw">
+            You
+            <div id="winOrLose" style="display: inline">Win</div>
+          </div>
+          <div>against Computer</div>
+          <div class="btn" id="playAgain">Play Again</div>
+          <div class="btn" id="resetScore">Reset Score</div>
+        </div>
+        <div class="circle">
+          <img
+            src="images/paper.png"
+            alt="Paper"
+            id="compPlayed"
+            class="playImg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="centerCard" id="playBtns">
+      <div class="upperCircle">
+        <div class="circle" id="rock">
+          <img src="images/rock.png" alt="Rock" class="playImg" />
+        </div>
+
+        <div class="circle" id="paper">
+          <img src="images/paper.png" alt="Paper" class="playImg" />
+        </div>
+      </div>
+      <div class="circle bottomCircle" id="scissor">
+        <img src="images/scissor.png" alt="Scissor" class="playImg" />
+      </div>
+    </div>
+
+    <div class="rules" id="ruleBtn">RULES</div>
+    <div id="ruleInfo">
+      <div id="xCircle">
+        <div class="innerX">X</div>
+      </div>
+      <div class="rulesTitle">Game Rules</div>
+      <div class="rulesCard">
+        <ul>
+          <li>Rock beats Scissor, Scissor beats Paper, and Paper beats Rock</li>
+          <li>
+            Agree ahead of time whether you will count off "Rock, Paper,
+            Scissor, shoot" of just "Rock, Paper, Scissor"
+          </li>
+          <li>
+            User Rock, Paper, Scissor to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li>
+            If both Players lay down the same hand, each Player lays down
+            another hand
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
