@@ -59,6 +59,18 @@ body {
   cursor: pointer;
 }
 
+#nextBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 125px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
 #ruleInfo {
   display: none;
   border: 3px solid white;
@@ -186,4 +198,17 @@ li {
 .btn:hover {
   background-color: white;
   color: #8cc461;
+}
+
+.winnerBody h1,
+h2 {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  font-size: 42px;
+}
+.winnerBody h1 {
+  font-size: 72px;
 }

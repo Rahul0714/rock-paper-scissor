@@ -12,6 +12,8 @@ const youPlayed = document.getElementById("youPlayed");
 const compPlayed = document.getElementById("compPlayed");
 const playAgain = document.getElementById("playAgain");
 const resetScore = document.getElementById("resetScore");
+const nextBtn = document.getElementById("nextBtn");
+const winOrLose = document.getElementById("winOrLose");
 
 let isWin = false;
 let you_score;
@@ -59,6 +61,8 @@ window.addEventListener("load", () => {
   }
   youScore.innerText = you_score;
   compScore.innerText = comp_score;
+  isWin = false;
+  nextBtn.style.display = "none";
 });
 
 const computerTurn = () => {
@@ -71,6 +75,11 @@ const updateUI = (user, comp) => {
   afterPlay.style.display = "block";
   youPlayed.src = `./images/${user}.png`;
   compPlayed.src = `./images/${comp}.png`;
+  if (user === comp) {
+    winOrLose.textContent = "DREW";
+  } else {
+    winOrLose.textContent = isWin ? "WON" : "LOST";
+  }
 };
 
 const updateScore = () => {
@@ -78,9 +87,15 @@ const updateScore = () => {
   compScore.innerText = comp_score;
   localStorage.setItem("userScore", you_score);
   localStorage.setItem("compScore", comp_score);
+  if (isWin) {
+    nextBtn.style.display = "block";
+  } else {
+    nextBtn.style.display = "none";
+  }
 };
 
 rock.addEventListener("click", () => {
+  isWin = false;
   const compRes = computerTurn();
   updateUI("rock", compRes);
   if (compRes == "rock") {
@@ -96,6 +111,7 @@ rock.addEventListener("click", () => {
 });
 
 paper.addEventListener("click", () => {
+  isWin = false;
   const compRes = computerTurn();
   updateUI("paper", compRes);
   if (compRes == "paper") {
@@ -111,6 +127,7 @@ paper.addEventListener("click", () => {
 });
 
 scissor.addEventListener("click", () => {
+  isWin = false;
   const compRes = computerTurn();
   updateUI("scissor", compRes);
   if (compRes == "scissor") {
